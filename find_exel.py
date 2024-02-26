@@ -1,6 +1,6 @@
 import openpyxl as pd
 
-def serchToCity(n):
+def serchToCity(n, str):
     book = pd.open("City_Price.xlsx", read_only=True)
     sheet = book.worksheets[0]
     flag = False
@@ -12,7 +12,7 @@ def serchToCity(n):
             a =  sheet[i][1].value
             flag = True
             break
-    
+
     return a
 
 def serchToMoscow(n):
@@ -30,4 +30,3 @@ def listOfCity():
     for i in range(2, sheet.max_row +1):
         print(sheet[i][0].value)
         
-listOfCity()
