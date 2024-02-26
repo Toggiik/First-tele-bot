@@ -7,9 +7,12 @@ n = int (n)
 city = input("Введите город: ").lower().strip()
 if city == "москва": 
     g = int(input("Если вы хотите обычную доставку нажмите 1. Если индивидуальную, нажмите 2. : "))
-    if g  == 1:
+    if g  == 2:
         cost = serchToMoscow(n)
-print (cost)
+    elif g==1: 
+        cost = serchToCity(n, city)
+else: 
+    cost = serchToCity(n, city)
 
         
         
